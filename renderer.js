@@ -4,9 +4,7 @@ const { exec } = require("child_process");
 
 const path = require("path");
 
-function navigateTo(page) {
-    ipcRenderer.send('navigate-to', page);
-}
+
 document.addEventListener("DOMContentLoaded", () => {
     const textArea = document.getElementById("fastTextArea");
 
@@ -37,12 +35,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-
-
-// document.getElementById("correct").addEventListener("click", () => {
-//     document.querySelector(".box33").classList.add("move-right");
-//     document.querySelector(".box34").classList.add("move-left");
-// });
 
 

@@ -19,8 +19,6 @@ function createWindow () {
  
 }
 
-
-// Create menu with custom items
 function createMenu() {
   const template = [
     {
@@ -50,13 +48,6 @@ function createMenu() {
   const menu = Menu.buildFromTemplate(template)
   Menu.setApplicationMenu(menu)
 }
-
-// Handle IPC messages
-ipcMain.on('navigate-to', (event, page) => {
-  const win = BrowserWindow.getFocusedWindow()
-  win.loadFile(page)
-})
-
 
 app.whenReady().then(() => {
   createWindow()
