@@ -3,12 +3,10 @@ const { app, BrowserWindow, Menu, ipcMain } = require('electron')
 
 function createWindow () {
   const win = new BrowserWindow({
-    
-    
-    fullscreen:true,
-
- 
-    
+    width:1600,
+    height:1000,
+    minWidth:1600,
+    minHeight:1000,
     
     webPreferences: {
       nodeIntegration: true,
@@ -36,6 +34,11 @@ function createMenu() {
           label: 'Restart',
           accelerator: 'CmdOrCtrl+R',
           click: () => {app.quit(); app.relaunch()}
+        },
+        {
+          label: 'Hide',
+          accelerator: 'CmdOrCtrl+H',
+          click: () => app.hide() 
         }
       ]
     }
